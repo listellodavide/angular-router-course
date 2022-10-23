@@ -30,6 +30,7 @@ main {
 
 .menu-item.menu-item-active {
   text-decoration: underline;
+  font-weight:700;
 }
 
 
