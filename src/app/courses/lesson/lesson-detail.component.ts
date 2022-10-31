@@ -11,16 +11,18 @@ import {map} from "rxjs/operators";
 })
 export class LessonDetailComponent implements OnInit {
 
-  lesson$: Observable<LessonDetail>;
+  lesson: LessonDetail;
+  // lesson$: Observable<LessonDetail>;
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
 
     console.log("Created LessonDetailComponent...");
 
   }
 
   ngOnInit() {
-
+    // this is not a good way to fetch data from the router, I am going to fix this as a second step
+    this.lesson = this.route.snapshot.data["lesson"];
   }
 
 
